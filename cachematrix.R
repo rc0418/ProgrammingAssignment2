@@ -1,3 +1,5 @@
+##
+## using the solve function allows R to compute the inverse of the matrix m. 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   set <- function(y) {
@@ -11,7 +13,8 @@ makeCacheMatrix <- function(x = matrix()) {
        setmatrix = setmatrix,
        getmatrix = getmatrix)
 }
-
+## This function inverses matrix 'm'. If the inverse matrix is available, it will be returned without the need of computation.
+##If it the inverse matrix is not found, it is computed and then returned.  
 cacheSolve <- function(x, ...) {
   m <- x$getmatrix()
   if(!is.null(m)) {
